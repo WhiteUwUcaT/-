@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace domain.LocationsContext.ValueObjects
+﻿namespace domain.LocationsContext.ValueObjects
 {
-    public class LocationAddress
+    public record LocationAddress
     {
         private readonly List<string> _addressParts = [];
 

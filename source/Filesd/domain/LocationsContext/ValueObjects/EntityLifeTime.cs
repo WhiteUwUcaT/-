@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace domain.LocationsContext.ValueObjects
+﻿namespace domain.LocationsContext.ValueObjects
 {
     public sealed record EntityLifeTime
     {
