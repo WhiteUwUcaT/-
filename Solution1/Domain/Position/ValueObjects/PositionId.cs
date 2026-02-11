@@ -13,7 +13,9 @@ namespace DirectoryService.Domain.PositionsContext.ValueObjects
         public static PositionId Create(Guid value)
         {
             if (value == Guid.Empty)
+            {
                 throw new ArgumentException("Идентификатор позиции не может быть пустым.", nameof(value));
+            }
 
             return new PositionId(value);
         }

@@ -16,17 +16,21 @@ namespace DirectoryService.Domain.DepartmentsContext.ValueObjects
         public static DepartmentDepth Create(short value)
         {
             if (value < 0)
+            {
                 throw new ArgumentException("Глубина подразделения не может быть отрицательной.", nameof(value));
+            }
 
             if (value > MaxDepth)
+            {
                 throw new ArgumentException($"Глубина подразделения не может превышать {MaxDepth}.", nameof(value));
+            }
 
             return new DepartmentDepth(value);
         }
 
         public static DepartmentDepth CalculateFromPath(DepartmentPath path)
         {
-            var depth = path.CalculateDepth();
+            short depth = path.CalculateDepth();
             return Create(depth);
         }
 

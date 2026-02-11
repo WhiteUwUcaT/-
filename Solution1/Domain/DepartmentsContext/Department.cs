@@ -20,10 +20,10 @@ namespace DirectoryService.Domain.DepartmentsContext
             DepartmentIdentifier identifier,
             bool isActive = true)
         {
-            var id = DepartmentId.Create();
-            var path = DepartmentPath.CreateForRoot(identifier.Value);
-            var depth = DepartmentDepth.CalculateFromPath(path);
-            var lifeTime = EntityLifeTime.Create(
+            DepartmentId id = DepartmentId.Create();
+            DepartmentPath path = DepartmentPath.CreateForRoot(identifier.Value);
+            DepartmentDepth depth = DepartmentDepth.CalculateFromPath(path);
+            EntityLifeTime lifeTime = EntityLifeTime.Create(
                 createdAt: DateTime.UtcNow,
                 updatedAt: DateTime.UtcNow
             );
@@ -47,10 +47,10 @@ namespace DirectoryService.Domain.DepartmentsContext
             Department parent,
             bool isActive = true)
         {
-            var id = DepartmentId.Create();
-            var path = DepartmentPath.CreateForChild(parent.Path, identifier.Value);
-            var depth = parent.Depth.Increment();
-            var lifeTime = EntityLifeTime.Create(
+            DepartmentId id = DepartmentId.Create();
+            DepartmentPath path = DepartmentPath.CreateForChild(parent.Path, identifier.Value);
+            DepartmentDepth depth = parent.Depth.Increment();
+            EntityLifeTime lifeTime = EntityLifeTime.Create(
                 createdAt: DateTime.UtcNow,
                 updatedAt: DateTime.UtcNow
             );
@@ -91,7 +91,7 @@ namespace DirectoryService.Domain.DepartmentsContext
         // Метод для изменения активности
         public Department ChangeActivity(bool isActive)
         {
-            var updatedLifeTime = EntityLifeTime.Create(
+            EntityLifeTime updatedLifeTime = EntityLifeTime.Create(
                 createdAt: LifeTime.CreatedAt,
                 updatedAt: DateTime.UtcNow,
                 isActive: isActive
@@ -110,13 +110,20 @@ namespace DirectoryService.Domain.DepartmentsContext
         }
 
         // Метод для проверки, является ли подразделение корневым
-        public bool IsRoot() => ParentId == null;
+        public bool IsRoot()
+        {
+            return ParentId == null;
+        }
 
         // Метод для проверки, является ли подразделение дочерним относительно другого
         public bool IsChildOf(Department parent)
         {
-            if (parent == null) return false;
-            return Path.Value.StartsWith(parent.Path.Value + ".");
+            if (parent == null)
+            {
+                return false;
+            }
+
+            return Path.Value.StartsWith(value: parent.Path.Value + ".", StringComparison.Ordinal);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DirectoryService.Domain.PositionsContext.ValueObjects;
 using DirectoryService.Domain.Shared;
+using System;
 
 namespace DirectoryService.Domain.PositionsContext
 {
@@ -7,38 +8,81 @@ namespace DirectoryService.Domain.PositionsContext
     {
         public PositionId Id { get; }
         public PositionName Name { get; }
-        public PositionDescription Description { get; }
+        public PositionAddress Address { get; }
+        public PositionTimeZone TimeZone { get; }
         public bool IsActive { get; }
         public EntityLifeTime LifeTime { get; }
 
         public Position(
             PositionId id,
             PositionName name,
-            PositionDescription description,
+            PositionAddress address,
+            PositionTimeZone timeZone,
             bool isActive,
             EntityLifeTime lifeTime)
         {
             Id = id;
             Name = name;
-            Description = description;
+            Address = address;
+            TimeZone = timeZone;
             IsActive = isActive;
             LifeTime = lifeTime;
         }
 
-        // Метод для изменения активности
-        public Position ChangeActivity(bool isActive)
+        public static Position Create(PositionName name, PositionAddress address, PositionTimeZone timeZone)
         {
-            // В реальном проекте здесь создавался бы новый объект с обновленным состоянием
-            // Так как объекты иммутабельны
-            // Для простоты оставим как есть
-            return this;
+            return new Position(
+                id: PositionId.Create(),
+                name: name,
+                address: address,
+                timeZone: timeZone,
+                isActive: true,
+                lifeTime: EntityLifeTime.Create(DateTime.UtcNow, DateTime.UtcNow, false)); // Добавлены параметры
         }
 
-        // Метод для обновления описания
-        public Position UpdateDescription(PositionDescription newDescription)
+        public static Position Create(Guid id, PositionName name, PositionAddress address, PositionTimeZone timeZone, bool isActive, EntityLifeTime lifeTime)
         {
-            // Аналогично - в реальности создание нового объекта
-            return this;
+            return new Position(
+                id: PositionId.Create(id),
+                name: name,
+                address: address,
+                timeZone: timeZone,
+                isActive: isActive,
+                lifeTime: lifeTime);
+        }
+
+        public Position ChangeActivity(bool isActive)
+        {
+            return new Position(Id, Name, Address, TimeZone, isActive, LifeTime.Update());
+        }
+
+        public Position UpdateName(PositionName newName)
+        {
+            ArgumentNullException.ThrowIfNull(newName); 
+
+            return new Position(Id, newName, Address, TimeZone, IsActive, LifeTime.Update());
+        }
+
+        public Position UpdateAddress(PositionAddress newAddress)
+        {
+            ArgumentNullException.ThrowIfNull(newAddress); 
+
+            return new Position(Id, Name, newAddress, TimeZone, IsActive, LifeTime.Update());
+        }
+
+        public Position UpdateTimeZone(PositionTimeZone newTimeZone)
+        {
+            ArgumentNullException.ThrowIfNull(newTimeZone); 
+
+            return new Position(Id, Name, Address, newTimeZone, IsActive, LifeTime.Update());
+        }
+
+        // Метод для обновления описания (если нужно)
+        public Position UpdateDescription(PositionAddress newDescription)
+        {
+            ArgumentNullException.ThrowIfNull(newDescription);
+
+            return new Position(Id, Name, newDescription, TimeZone, IsActive, LifeTime.Update());
         }
     }
 }

@@ -1,48 +1,59 @@
-﻿namespace Domain.LocationsContext.ValueObjects
+﻿using System;
+
+namespace DirectoryService.Domain.ValueObjects
 {
-    public sealed record IanaTimeZone
+    public class IanaTimeZone : IEquatable<IanaTimeZone>
     {
         public string Value { get; }
 
         private IanaTimeZone(string value)
         {
-            Value = value;
+            Value = value ?? throw new ArgumentNullException(nameof(value));
+
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("IANA time zone cannot be empty", nameof(value));
+            }
+
+            if (value.Length > 100)
+            {
+                throw new ArgumentException("IANA time zone cannot exceed 100 characters", nameof(value));
+            }
+
+            Value = value.Trim();
         }
 
         public static IanaTimeZone Create(string value)
         {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException(
-                    "IANA временная зона не может быть пустой.",
-                    nameof(value)
-                );
-
-            if (!value.Contains('/', StringComparison.Ordinal))
-                throw new ArgumentException(
-                    "Некорректный формат IANA временной зоны.",
-                    nameof(value)
-                );
-
-            string[] parts = value.Split('/');
-            if (parts.Length != 2)
-                throw new ArgumentException(
-                    "Некорректный формат IANA временной зоны.",
-                    nameof(value)
-                );
-
-            if (parts.Any(p => string.IsNullOrWhiteSpace(p)))
-                throw new ArgumentException(
-                    "Некорректный формат IANA временной зоны.",
-                    nameof(value)
-                );
-
             return new IanaTimeZone(value);
         }
 
-        public static IanaTimeZone ChangeIana(string name)
+
+        public bool Equals(IanaTimeZone? other)
         {
-            IanaTimeZone newname = Create(name);
-            return newname;
+            if (other is null)
+            {
+                return false;
+            }
+
+            return Value == other.Value;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is IanaTimeZone other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return Value.GetHashCode(StringComparison.Ordinal);
+        }
+
+        public override string ToString()
+        {
+            return Value;
+        }
+
+        public static IanaTimeZone FromString(string value) => Create(value);
     }
 }

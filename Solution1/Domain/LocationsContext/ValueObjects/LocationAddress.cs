@@ -1,56 +1,58 @@
-﻿namespace Domain.LocationsContext.ValueObjects
-{
-    public sealed record LocationAddress
-    {
-        private readonly List<string> _addressParts = new();
+﻿using System;
 
+namespace DirectoryService.Domain.ValueObjects
+{
+    public class LocationAddress : IEquatable<LocationAddress>
+    {
         public string Value { get; }
 
-        public IReadOnlyList<string> AddressParts => _addressParts.AsReadOnly();
-
-        private LocationAddress(IEnumerable<string> parts)
+        private LocationAddress(string value)
         {
-            _addressParts = parts.ToList();
-            Value = string.Join(", ", parts);
+            Value = value ?? throw new ArgumentNullException(nameof(value));
+
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new ArgumentException("Address cannot be empty", nameof(value));
+            }
+
+            if (value.Length > 500)
+            {
+                throw new ArgumentException("Address cannot exceed 500 characters", nameof(value));
+            }
+
+            Value = value.Trim();
         }
 
         public static LocationAddress Create(string value)
         {
-            if (string.IsNullOrWhiteSpace(value))
-                throw new ArgumentException("Адрес локации не может быть пустым.", nameof(value));
-
-            var parts = value
-                .Split(',')
-                .Select(part => part.Trim())
-                .Where(part => !string.IsNullOrWhiteSpace(part))
-                .ToList();
-
-            if (parts.Count == 0)
-                throw new ArgumentException(
-                    "Адрес локации должен содержать хотя бы одну часть.",
-                    nameof(value));
-
-            return new LocationAddress(parts);
+            return new LocationAddress(value);
         }
 
-        public static LocationAddress Create(IEnumerable<string> parts)
+
+        public bool Equals(LocationAddress? other)
         {
-            if (!parts.Any())
-                throw new ArgumentException(
-                    "Адрес локации должен содержать хотя бы одну часть.",
-                    nameof(parts));
+            if (other is null)
+            {
+                return false;
+            }
 
-            var trimmedParts = parts
-                .Select(part => part.Trim())
-                .Where(part => !string.IsNullOrWhiteSpace(part))
-                .ToList();
-
-            if (trimmedParts.Count == 0)
-                throw new ArgumentException(
-                    "Адрес локации должен содержать хотя бы одну часть.",
-                    nameof(parts));
-
-            return new LocationAddress(trimmedParts);
+            return Value == other.Value;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is LocationAddress other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return Value.GetHashCode(StringComparison.Ordinal);
+        }
+
+        public override string ToString()
+        {
+            return Value;
+        }
+        public static LocationAddress FromString(string value) => Create(value);
     }
 }
