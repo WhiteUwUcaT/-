@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\",
+  "WorkspaceRootPath": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentdepth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\valueobjects\\departmentdepth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentdepth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\valueobjects\\departmentid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\valueobjects\\departmentname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\post\\4-post\\solution1\\domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -44,9 +44,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DepartmentDepth.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -57,66 +57,61 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DepartmentId.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T02:30:14.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T02:30:14.161Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "DepartmentIdentifier.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwA0AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T02:30:12.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T02:30:12.487Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DepartmentName.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T02:30:05.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T02:30:05.536Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "DepartmentPath.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T02:30:08.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T02:30:08.592Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Department.cs",
-              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "DocumentMoniker": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\Department.cs",
-              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\123\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "ToolTip": "E:\\2\\\u043C\u043E\u0434\u0443\u043B\u0438\\Post\\4-post\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
               "RelativeToolTip": "Domain\\DepartmentsContext\\Department.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAADwv30AAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T02:30:06.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-11T02:30:06.615Z"
             }
           ]
         }
