@@ -1,14 +1,24 @@
 ﻿using System;
 
-namespace DirectoryService.Domain.PositionsContext.ValueObjects
+namespace DirectoryService.Domain.Position.ValueObjects
 {
     public sealed record PositionId
     {
         public Guid Value { get; }
 
-        private PositionId(Guid value) => Value = value;
+        private PositionId(Guid value)
+        {
+            Value = value;
+        }
+        private PositionId(Guid value)
+        {
+            Value = value;
+        }
 
-        public static PositionId Create() => new(Guid.NewGuid());
+        public static PositionId Create()
+        {
+            return new PositionId(Guid.NewGuid());
+        }
 
         public static PositionId Create(Guid value)
         {

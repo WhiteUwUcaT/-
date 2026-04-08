@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DirectoryService.Domain.PositionsContext.ValueObjects
+namespace DirectoryService.Domain.Position.ValueObjects
 {
     public sealed record PositionName
     {
@@ -9,7 +9,10 @@ namespace DirectoryService.Domain.PositionsContext.ValueObjects
 
         public string Value { get; }
 
-        private PositionName(string value) => Value = value;
+        private PositionName(string value)
+        {
+            Value = value;
+        }
 
         public static PositionName Create(string value)
         {

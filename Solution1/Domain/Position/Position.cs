@@ -1,8 +1,8 @@
-﻿using DirectoryService.Domain.PositionsContext.ValueObjects;
+﻿using DirectoryService.Domain.Position.ValueObjects; // Изменено здесь
 using DirectoryService.Domain.Shared;
 using System;
 
-namespace DirectoryService.Domain.PositionsContext
+namespace DirectoryService.Domain.Position
 {
     public class Position
     {
@@ -37,7 +37,7 @@ namespace DirectoryService.Domain.PositionsContext
                 address: address,
                 timeZone: timeZone,
                 isActive: true,
-                lifeTime: EntityLifeTime.Create(DateTime.UtcNow, DateTime.UtcNow, false)); // Добавлены параметры
+                lifeTime: EntityLifeTime.Create(DateTime.UtcNow, DateTime.UtcNow, false));
         }
 
         public static Position Create(Guid id, PositionName name, PositionAddress address, PositionTimeZone timeZone, bool isActive, EntityLifeTime lifeTime)
@@ -51,38 +51,39 @@ namespace DirectoryService.Domain.PositionsContext
                 lifeTime: lifeTime);
         }
 
+        private void EnsureNotArchived()
+        {
+            if (LifeTime.IsArchived)
+            {
+                throw new InvalidOperationException("Нельзя изменять архивированную позицию.");
+            }
+        }
+
         public Position ChangeActivity(bool isActive)
         {
+            EnsureNotArchived();
             return new Position(Id, Name, Address, TimeZone, isActive, LifeTime.Update());
         }
 
         public Position UpdateName(PositionName newName)
         {
-            ArgumentNullException.ThrowIfNull(newName); 
-
+            ArgumentNullException.ThrowIfNull(newName);
+            EnsureNotArchived();
             return new Position(Id, newName, Address, TimeZone, IsActive, LifeTime.Update());
         }
 
         public Position UpdateAddress(PositionAddress newAddress)
         {
-            ArgumentNullException.ThrowIfNull(newAddress); 
-
+            ArgumentNullException.ThrowIfNull(newAddress);
+            EnsureNotArchived();
             return new Position(Id, Name, newAddress, TimeZone, IsActive, LifeTime.Update());
         }
 
         public Position UpdateTimeZone(PositionTimeZone newTimeZone)
         {
-            ArgumentNullException.ThrowIfNull(newTimeZone); 
-
+            ArgumentNullException.ThrowIfNull(newTimeZone);
+            EnsureNotArchived();
             return new Position(Id, Name, Address, newTimeZone, IsActive, LifeTime.Update());
-        }
-
-        // Метод для обновления описания (если нужно)
-        public Position UpdateDescription(PositionAddress newDescription)
-        {
-            ArgumentNullException.ThrowIfNull(newDescription);
-
-            return new Position(Id, Name, newDescription, TimeZone, IsActive, LifeTime.Update());
         }
     }
 }

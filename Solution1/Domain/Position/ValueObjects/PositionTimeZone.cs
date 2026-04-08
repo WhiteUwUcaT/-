@@ -1,13 +1,15 @@
 ﻿using System;
 
-namespace DirectoryService.Domain.PositionsContext.ValueObjects
+namespace DirectoryService.Domain.Position.ValueObjects
 {
     public sealed record PositionTimeZone
     {
         public const int MaxLength = 100;
         public string Value { get; }
-        private PositionTimeZone(string value) => Value = value;
-
+        private PositionTimeZone(string value)
+        {
+            Value = value;
+        }
         public static PositionTimeZone Create(string value)
         {
             if (value == null)

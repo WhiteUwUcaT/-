@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DirectoryService.Domain.PositionsContext.ValueObjects
+namespace DirectoryService.Domain.Position.ValueObjects
 {
     public sealed record PositionAddress
     {
@@ -8,8 +8,10 @@ namespace DirectoryService.Domain.PositionsContext.ValueObjects
 
         public string Value { get; }
 
-        private PositionAddress(string value) => Value = value;
-
+        private PositionAddress(string value)
+        {
+            Value = value;
+        }
         public static PositionAddress Create(string value)
         {
             if (value == null)

@@ -6,53 +6,28 @@ namespace DirectoryService.Domain.Shared
     {
         public DateTime CreatedAt { get; }
         public DateTime UpdatedAt { get; }
-        public bool IsActive { get; }
+        public bool IsArchived { get; } // То самое свойство, которого не хватало
 
-        private EntityLifeTime(DateTime createdAt, DateTime updatedAt, bool isActive)
+        private EntityLifeTime(DateTime createdAt, DateTime updatedAt, bool isArchived)
         {
             CreatedAt = createdAt;
             UpdatedAt = updatedAt;
-            IsActive = isActive;
+            IsArchived = isArchived;
         }
 
-        public static EntityLifeTime Create(
-            DateTime createdAt,
-            DateTime updatedAt,
-            bool isActive = true
-        )
+        public static EntityLifeTime Create(DateTime createdAt, DateTime updatedAt, bool isArchived)
         {
-            if (createdAt == DateTime.MinValue || createdAt == DateTime.MaxValue)
-            {
-                throw new ArgumentException(
-                    "Некорректное значение даты создания.",
-                    nameof(createdAt)
-                );
-            }
-
-            if (updatedAt == DateTime.MinValue || updatedAt == DateTime.MaxValue)
-            {
-                throw new ArgumentException(
-                    "Некорректное значение даты обновления.",
-                    nameof(updatedAt)
-                );
-            }
-
-            if (updatedAt < createdAt)
-            {
-                throw new ArgumentException(
-                    "Дата обновления не может быть меньше даты создания.",
-                    nameof(updatedAt)
-                );
-            }
-
-            return new EntityLifeTime(createdAt, updatedAt, isActive);
+            return new EntityLifeTime(createdAt, updatedAt, isArchived);
         }
 
         public EntityLifeTime Update()
         {
-            DateTime now = DateTime.UtcNow;
-            EntityLifeTime time = new EntityLifeTime(CreatedAt, now, IsActive);
-            return time;
+            return new EntityLifeTime(CreatedAt, DateTime.UtcNow, IsArchived);
+        }
+
+        public EntityLifeTime Archive()
+        {
+            return new EntityLifeTime(CreatedAt, DateTime.UtcNow, true);
         }
     }
 }
