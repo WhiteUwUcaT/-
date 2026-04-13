@@ -25,7 +25,8 @@ namespace DirectoryService.Domain.DepartmentsContext
             DepartmentDepth depth = DepartmentDepth.CalculateFromPath(path);
             EntityLifeTime lifeTime = EntityLifeTime.Create(
                 createdAt: DateTime.UtcNow,
-                updatedAt: DateTime.UtcNow
+                updatedAt: DateTime.UtcNow,
+                isArchived: false
             );
 
             return new Department(
@@ -52,7 +53,8 @@ namespace DirectoryService.Domain.DepartmentsContext
             DepartmentDepth depth = parent.Depth.Increment();
             EntityLifeTime lifeTime = EntityLifeTime.Create(
                 createdAt: DateTime.UtcNow,
-                updatedAt: DateTime.UtcNow
+                updatedAt: DateTime.UtcNow,
+                isArchived: false
             );
 
             return new Department(
@@ -91,11 +93,7 @@ namespace DirectoryService.Domain.DepartmentsContext
         // Метод для изменения активности
         public Department ChangeActivity(bool isActive)
         {
-            EntityLifeTime updatedLifeTime = EntityLifeTime.Create(
-                createdAt: LifeTime.CreatedAt,
-                updatedAt: DateTime.UtcNow,
-                isActive: isActive
-            );
+            EntityLifeTime updatedLifeTime = LifeTime.Update();
 
             return new Department(
                 Id,

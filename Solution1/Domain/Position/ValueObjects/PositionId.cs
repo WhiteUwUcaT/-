@@ -10,10 +10,6 @@ namespace DirectoryService.Domain.Position.ValueObjects
         {
             Value = value;
         }
-        private PositionId(Guid value)
-        {
-            Value = value;
-        }
 
         public static PositionId Create()
         {
